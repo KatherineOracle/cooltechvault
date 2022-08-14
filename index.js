@@ -34,17 +34,16 @@ app.use('/api/refresh', require('./routes/refresh'));
 app.use('/logout', require('./routes/logout'));
 
 //routes after this point will use the verifyToken middleware
-app.use(verifyToken);
-app.use('/api/profile', require('./routes/profile'));
+app.use('/api/profile', verifyToken, require('./routes/profile'));
 
 //need to verify role as employee or higher
-app.use('/api/credentials', verifyRole('employee'), require('./routes/credentials'));
-app.use('/api/credential', verifyRole('employee'), require('./routes/credential'));
+app.use('/api/credentials', verifyToken, verifyRole('employee'), require('./routes/credentials'));
+app.use('/api/credential', verifyToken, verifyRole('employee'), require('./routes/credential'));
 
-app.use(verifyRole('administrator'));
-app.use('/api/user', require('./routes/user'));
-app.use('/api/users', require('./routes/users'));
-app.use('/api/divisions', require('./routes/divisions'));
+//need to verify role as administrator 
+app.use('/api/user', verifyToken, verifyRole('administrator'), require('./routes/user'));
+app.use('/api/users', verifyToken, verifyRole('administrator'), require('./routes/users'));
+app.use('/api/divisions', verifyToken, verifyRole('administrator'), require('./routes/divisions'));
 
 
 if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
@@ -53,7 +52,6 @@ if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging')
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
   });
 }
-
 
 // connect to Mongo when the app initializes
 const uri = process.env.CONNECTIONSTRING;
