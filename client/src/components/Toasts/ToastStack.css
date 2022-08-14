@@ -1,0 +1,13 @@
+.toastStack {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.1em;
+}
+.toast-header {
+  font-size: 1.1rem;
+  color: #000000;
+}
+.toast-body {
+  color: #ffffff;
+}

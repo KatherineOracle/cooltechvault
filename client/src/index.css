@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=RobotoCondensed:wght@700&family=Roboto+Condensed:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", "Open sans", sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Impact", sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: #118ab2;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px dotted #118ab2;
+}
+h2 {
+  color: #999;
+}
+h3 {
+  color: #ee6c4d;
+}
+h4 {
+  color: #118ab2;
+}
+
+form label {
+  color: #666;
+}
+.float-right{float: right}
+button.btn.btn-primary, a.btn.btn-primary {
+  background-color: #ee6c4d;
+  border-color: #ee6c4d;
+}
+.btn.btn-light {
+  background-color: lightblue;
+}
+.actions {
+  gap: 1.5em;
+}
+
+
+

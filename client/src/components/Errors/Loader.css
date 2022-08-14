@@ -1,0 +1,31 @@
+
+/**
+ * Style for CSS animated loading bar
+ */
+.bar {
+  width: 100%;
+  max-width: 600px;
+  background: #eeeeee;
+  height: 35px;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.loader{width: 5%;   max-width: 600px;
+    background: #118ab2;
+    height: 15px;
+    border-radius: 7px;
+    animation-name: grow;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: forward;    
+}
+
+@keyframes grow {
+    from {width: 0%;}
+    to {width: 100%;}
+  }
+
+
