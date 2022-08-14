@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import { Table, Form, Row } from "react-bootstrap";
+import { Table, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import UserListItem from "./UserListItem";
 import useAuth from "../../hooks/useAuth";
 import useAPIFetch from "../../hooks/useAPIFetch";
-import useToasts from "../../hooks/useToasts";
 import LoadWait from "../Errors/LoadWait";
 
 /**
@@ -16,7 +15,6 @@ import LoadWait from "../Errors/LoadWait";
 const UserList = () => {
   const fetchData = useAPIFetch();
   const { authMap } = useAuth();
-  const { addToast } = useToasts();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);        
   const [userList, setUserList] = useState(null);
