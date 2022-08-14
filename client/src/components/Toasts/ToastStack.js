@@ -1,4 +1,4 @@
-import Stack from "react-bootstrap/stack";
+import Stack from "react-bootstrap/Stack";
 import ToastItem from "./ToastItem";
 import useToasts from '../../hooks/useToasts';
 import "./ToastStack.css";
