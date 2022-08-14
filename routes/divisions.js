@@ -17,10 +17,10 @@ router
   .get(divisionsController.handleFindAllDivisions)
   .post((req, res) => {
     res.sendStatus(405);
-})
+  })
   .put(divisionsController.handleUpdateAllDivisions)
   .delete((req, res) => {
     res.sendStatus(405);
-});
+  });
 
 module.exports = router;

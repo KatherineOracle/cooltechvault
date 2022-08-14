@@ -82,7 +82,7 @@ const CredentialsList = () => {
     //get all the divisions for the administrator
     if (hasPermissionLevel(3)) {
       try {
-        let data = await fetchData("/divisions/", {
+        let data = await fetchData("/divisions", {
           method: "GET",
           isProtected: true,
         });
