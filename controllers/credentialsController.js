@@ -3,7 +3,7 @@
  * @module controllers/credentialController
  * @requires CredentialModel
  */
-const CredentialModel = require("../models/credential.js");
+const CredentialModel = require("../models/Credential.js");
 
 /** 
  * @function handleCreateCredential Method to add a credential to the database
