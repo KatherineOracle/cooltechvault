@@ -35,7 +35,7 @@ app.use("/api", require('./routes/root'));
 app.use('/api/register', require('./routes/register'));
 app.use('/api/login', require('./routes/login'));
 app.use('/api/refresh', require('./routes/refresh'));
-app.use('v/logout', require('./routes/logout'));
+app.use('/logout', require('./routes/logout'));
 
 //routes after this point will use the verifyToken middleware
 app.use(verifyToken);
