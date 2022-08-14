@@ -5,7 +5,6 @@
  */
 const DivisionModel = require("../models/Division.js");
 
-
 /** 
  * @function handleFindAllDivisions Method to return all divisions
  * @param req {Object} The request.

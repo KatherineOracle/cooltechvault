@@ -12,7 +12,6 @@ const Login = () => {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
   const location = useLocation();
-  console.log(location.state);
 /**
  * Handles form submit
  * @function submitHandler

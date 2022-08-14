@@ -10,9 +10,7 @@ const mongoose = require('mongoose')
  * departmentSchema schema - a sub document model of division
  * @constructor departmentSchema
  */ 
-const departmentSchema = new Schema({
-name: {type: String}
-});
+//const departmentSchema = new Schema({ name: {type: String} });
 
 /**
  * divisionSchema schema
@@ -23,7 +21,10 @@ const divisionSchema = new Schema({
     updatedOn: {type: Date},
     deletedOn: {type: Date},
     unit: {type: String},
-    departments: [departmentSchema],
+    departments: [new Schema({ name: {type: String} })],
 }, { collection: "Divisions" });
 
+
+
+    
 module.exports = mongoose.model('Divisions', divisionSchema);

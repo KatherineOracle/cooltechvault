@@ -15,11 +15,8 @@ const authMap = {
 // used to log user our automatically 5s before the accessToken expires
 const setTimer = (expiryTime, action) => {
   let timer = null;
-
   if (!expiryTime) return clearTimeout(timer);
-
   let timerMSecs = new Date(expiryTime) - Date.now() - 5000;
-  console.log(timerMSecs);
   timer = setTimeout(action, timerMSecs);
 };
 
