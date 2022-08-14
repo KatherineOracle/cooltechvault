@@ -1,5 +1,6 @@
 // The main application script, ties everything together.
 const PORT = process.env.PORT || 5000;
+const path = require('path')
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require('cookie-parser');
