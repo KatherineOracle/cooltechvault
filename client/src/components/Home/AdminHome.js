@@ -22,7 +22,7 @@ const AdminHome = () => {
         <li>View and update your <Link to="/profile">PROFILE</Link> </li>
         <li>View, add, edit <Link to="/credentials">CREDENTIALS</Link> for all departments</li>
         <li>Add, and edit departments under <Link to="/divisions">DIVISIONS</Link> </li>
-        <li>Add,  edit and update  <Link to="/divisions">USERS</Link> </li>
+        <li>Add,  edit and update  <Link to="/users">USERS</Link> </li>
       </ul>
       <hr/>
       <p>Please contact the <a href={`mailto:${process.env.REACT_APP_ADMIN_EMAIL}`}>administrator</a> if you have any issues... oh no wait, thats you!</p>
