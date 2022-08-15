@@ -65,7 +65,6 @@ export const AuthProvider = ({ children }) => {
 
       if (data.error) throw Error(data.message);
 
-      console.log(data);
       //both login methods must update our user state and reset logout timer 
       setUser({ ...data.user });
       setAccessToken({ token: data.token, tokenExpiry: data.tokenExpiry });
