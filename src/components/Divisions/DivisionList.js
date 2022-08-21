@@ -4,7 +4,7 @@ import useAPIFetch from "../../hooks/useAPIFetch";
 import useToasts from "../../hooks/useToasts";
 import LoadWait from "../Errors/LoadWait";
 import DivisionListItem from "./DivisionListItem";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import "./DivisionList.css";
 
 /**
