@@ -327,6 +327,8 @@ const CredentialsList = () => {
 
   return (
     <>
+
+    {!!divisions && <LoadWait loading={loading} error={error} />}
       <h1>Credentials</h1>
 
       {divisions && (

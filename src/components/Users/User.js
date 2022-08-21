@@ -287,10 +287,12 @@ const User = () => {
                 <Form.Label>Operating units:</Form.Label>
               </Col>
               <Col md={9} lg={10}>
-                <DivisionCheckList
+              {(userData.role === "administrator") && <p>Administrators have access to all departments</p>}
+              {(userData.role !== "administrator") && <DivisionCheckList
                   userDepartments={userDepartments}
                   setUserDepartments={setUserDepartments}
                 />
+                } 
                 <hr />
               </Col>
             </Row>

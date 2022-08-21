@@ -71,7 +71,7 @@ const useAPIFetch = () => {
 
     //Ready to call the API
     try{
-      const response = await fetch(process.env.REACT_APP_API+url, requestOptions);
+      const response = await fetch(process.env.REACT_APP_API_BASE+url, requestOptions);
 
       //not sure if we'll get json so get response as text first
       let data = await response.text() || "";
