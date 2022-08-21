@@ -74,7 +74,7 @@ const UserList = () => {
   }
 
 
-    if(!userList) return <LoadWait loading={loading} error={error} />
+    
 
     return(
         <>
@@ -82,6 +82,8 @@ const UserList = () => {
           <Link className="btn btn-primary float-right" to={'user/new'}>Add new User</Link>
           <h1>Users</h1>  
         </div>
+        {(!userList) && <LoadWait loading={loading} error={error} />}
+        {(userList) && (<>
         <Form className="bg-light p-3">
           <div className="d-flex p-1 align-items-center">
             <div className="flex-shrink-1 pe-4"><label>Filter by</label></div>
@@ -107,6 +109,8 @@ const UserList = () => {
           }
         </tbody>
         </Table>
+</>
+        )}
         </>
     )
 

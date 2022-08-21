@@ -214,12 +214,12 @@ const DivisionList = () => {
     putDivisions(copiedDivisions);
   };
 
-  if (!divisions) return <LoadWait loading={loading} error={error} />;
 
   return (
     <>
       <h1>Divisions</h1>
-
+      {!divisions && <LoadWait loading={loading} error={error} />}
+      {divisions && (
       <Row className="g-1">
         <DragDropContext
           onDragEnd={(dropResult) => onDragEnd(dropResult)}
@@ -291,6 +291,7 @@ const DivisionList = () => {
           })}
         </DragDropContext>
       </Row>
+      )}
     </>
   );
 };
