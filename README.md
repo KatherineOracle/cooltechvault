@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# CooltechVault client app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the front end of my Cooltech Vault - a credential storage system. 
+
+You will need a backend API, you can check out my express/mongoose API script here: <https://github.com/KatherineOracle/cooltechvault-api>
 
 ## Available Scripts
 

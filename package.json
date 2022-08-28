@@ -1,7 +1,8 @@
 {
-  "name": "client",
+  "name": "cooltechvaultclient",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@hello-pangea/dnd": "15.0.0",
     "@testing-library/jest-dom": "5.16.5",
